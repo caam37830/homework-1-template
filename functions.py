@@ -3,6 +3,7 @@ A library of functions
 """
 import numpy as np
 import matplotlib.pyplot as plt
+import numbers
 
 class AbstractFunction:
     """
@@ -100,7 +101,7 @@ class Polynomial(AbstractFunction):
 
 
     def __repr__(self):
-        return "Polynomial{}".format(tuple(*coeff))
+        return "Polynomial{}".format(tuple(self.coeff))
 
 
     def __str__(self):
@@ -149,9 +150,15 @@ class Polynomial(AbstractFunction):
         """
         evaluate polynomial at x
         """
-        x = np.array(x)
-        # use vandermonde matrix
-        return np.vander(x, len(self.coeff)).dot(self.coeff)
+        if isinstance(x, numbers.Number):
+            ret = 0
+            for k, c in enumerate(reversed(self.coeff)):
+                ret = ret + c * x**k
+            return ret
+        elif isinstance(x, np.ndarray):
+            x = np.array(x)
+            # use vandermonde matrix
+            return np.vander(x, len(self.coeff)).dot(self.coeff)
 
 
     def derivative(self):

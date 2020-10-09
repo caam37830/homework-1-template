@@ -195,7 +195,7 @@ Symbolic("f'")
 
 Note that Symbolic functions won't be compatible with the `plot` method defined in the `AbstractFunction` class.
 
-In `answers.ipynb`, take the derivative of the produce of two symbolic functions to get an expression for product rule.
+In `answers.ipynb`, take the derivative of the product of two symbolic functions to get an expression for product rule.
 
 ### Part F: Use the Module (5 points)
 

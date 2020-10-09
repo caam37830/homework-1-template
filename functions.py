@@ -199,3 +199,11 @@ class Polynomial(AbstractFunction):
             return Polynomial(*np.polymul(self.coeff, other.coeff))
         else:
             return super().__mul__(other)
+
+
+class Affine(Polynomial):
+    """
+    affine function a * x + b
+    """
+    def __init__(self, a, b):
+        super().__init__(a, b)

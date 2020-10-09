@@ -145,6 +145,8 @@ You should provide implementations for:
 When implementing `__str__`, place `{0}` where indeterminates in the function would go.
 You can look at the implementation of `Polynomial` for examples of this.  If you call the `format` method on the string, you need to escape the sequence (so it isn't formatted), by enclosing in an extra set of braces: `"{{0}}"`
 
+Note that functions don't generally simplify nicely, e.g. removing terms with zero coefficients, combining the composition of powers to a single power etc.  In order to do this, you would need to encode the rules to simplify expressions, which would add more complexity to this assignment (so you don't need to do it).  Some of this is done in the implementation of `Polynomial` (in `__add__` and `__mul__`) if you want to take a look.
+
 Make a plot of `Compose(Polynomial(1,0,0), Polynomial(1,0,0))`.  What is the equivalent function expressed as a `Polynomial`?
 
 ### Part D: Implement Power (and some other functions) (15 points)

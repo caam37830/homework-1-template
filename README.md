@@ -1,6 +1,6 @@
 # Homework 1 - Object Oriented Programming and Functions
 
-In this homework, you'll create a library of function classes which are related by class inheritance.
+In this homework you'll create a library of function classes which are related by class inheritance.  This is a common design pattern in a variety of packages, such as SciPy, SymPy, and PyTorch.  This is a group assignment, so you will practice working in a shared repository.
 
 You can run
 ```
@@ -15,7 +15,7 @@ Please put plots and written answers in the Jupyter notebook [`answers.ipynb`](a
 ### Due Date
 This assignment is due Friday, October 16 at 12pm (noon) Chicago time.
 
-You should make sure you have pushed your completed repository to GitHub by this time.
+You should make sure you have pushed your completed work to GitHub by this time.
 
 
 ### Group Assignment
@@ -25,6 +25,8 @@ This is a group assignment.  You will share a `git` repository, and work will be
 You should communicate with your group early on to discuss who will do what, and check in regularly to make sure work is being completed.  You may wish to video chat or use Slack to troubleshoot or debug together.  It is perfectly fine to write code collectively e.g. get on video and "pair program".  Work should be divided roughly equally, and you'll be asked to say who was primarily responsible for what (you don't have to be super detailed).
 
 If you having trouble communicating with members of your group e.g. someone is just not responding to emails at all, please let the course staff know.  In extreme cases, group members may be re-assigned.
+
+If you are new to using git, see [collaboriating with git](https://github.com/caam37830/git-tutorial/blob/master/collaborating.md) [[Video](https://uchicago.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3bdb5733-3c8c-4c52-a906-ac4e000ed3f7)].  It is recommended to use a branch for each team member.
 
 ### Grading Rubric
 
@@ -46,7 +48,7 @@ The following rubric will be used for grading.
 | Part A    | /4  |  /4   | /2  |  /10 |
 | Part B    |   |  /8   | /2  |  /10 |
 
-Correctness will be based on code (i.e. did you provide was was asked for) and the content of [`answers.md`](answers.md).
+Correctness will be based on code (i.e. did you provide was was asked for) and the content of [`answers.ipynb`](answers.ipynb).
 
 To get full points on style you should use comments to explain what you are doing in your code and write docstrings for your functions.  In other words, make your code readable and understandable.
 
@@ -60,9 +62,23 @@ or
 ```
 pytest test.py
 ```
-The tests are in [`test.py`](test.py).  You do not need to modify (or understand) this code.
+The tests are in [`test.py`](test.py).  You should not modify this code, and don't need to understand it, but you can read it to see what is being tested.  The output of the autograder should tell you where you have issues that need to be resolved.
 
 You need to pass all tests to receive full points.
+
+Keep in mind that the autograder is just doing some basic sanity checks, which is why there are also separate points for "correctness".  However, if you are passing the autograder checks, chances are you're on your way to success.
+
+### Some git/GitHub Tips
+
+On Homework 0, GitHub classroom sometimes didn't configure things correctly.  This is apparently a bug, and I have filed an issue with GitHub.
+
+To make things work as smooth as possible, please check:
+1. GitHub actions is enabled for your repository - you can check this in the actions tab.  This just requires clicking a button if it isn't enabled.  See [the template repository](https://github.com/caam37830/homework-1-template/actions) for example.  There is an action configured that checks for problems in the code and runs the autograder whenever you push code, which can give you quick feedback on if things aren't working properly.  You can always run the autograder tests by yourself without GitHub actions.
+2. Check that there is a feedback pull request created for your repository - if this hasn't happened contact the course staff, so we can do it manually.
+
+Also, make sure you don't delete the `.gitignore` file, `.github` folder, or `.git` folder.  These are "hidden" files that don't always show in file managers - you can view them in terminal using `ls -a`.  `.gitignore` keeps temporary files out of version control (like `__pycache__`, or `.ipynb_checkpoints`), and the `.github` folder contains information to run the GitHub actions for the repository discussed above.  The `.git` folder contains all the version control information for your repository.
+
+
 
 ## Problem 0
 
